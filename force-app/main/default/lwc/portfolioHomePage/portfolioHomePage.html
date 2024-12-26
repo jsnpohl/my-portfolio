@@ -1,0 +1,103 @@
+<template>
+    <div id="Container" class="container" data-id="ContainerSection">
+        <nav class="navbar slds-grid slds-grid_align-spread slds-media_center">
+            <h1 class="logo">Jason.</h1>
+            <ul class="nav-menu">
+                <li>
+                    <p class="nav-item nav-item-active" data-id="Container" onclick={handleNavItemClick}>Home</p>
+                </li>
+                <li>
+                    <p class="nav-item" data-id="Portfolio" onclick={handleNavItemClick}>Portfolio</p>
+                </li>
+                <li>
+                    <p class="nav-item" data-id="Skills" onclick={handleNavItemClick}>Skills</p>
+                </li>
+            </ul>
+            <a href="https://jasonpohl-portfolio-dev-ed.develop.my.salesforce.com/sfc/p/ak00000JQh4o/a/ak0000003Id7/mKwxh8EBRb2y6KMbkIakwRxh8caC7TYwswnP69_KIU0" class="nav-btn">Download CV</a>
+        </nav>
+        <section class="home-section slds-grid">
+            <div class="home-section-info">
+                <h1>Jason Pohl</h1>
+                <h2>Salesforce Developer | 9x Certified</h2>
+                <p>I design and deliver custom solutions that help organizations unlock the full potential of Salesforce.
+                    Let's connect today and build something special!</p>
+                <div class="social-section">
+                    <div class="btn" onclick={handleViewWorkClick}>View My Work</div>
+                    <div class="social">
+                        <a href="https://github.com/jsnpohl"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/jasonpohl89"><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="https://www.salesforce.com/trailblazer/jasonpohl"><i class='bx bxs-cloud'></i></a>
+                        <a href="mailto:jsnpohl@gmail.com"><i class='bx bx-envelope' ></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="home-img">
+                <div class="img-box">
+                    <div class="img-item">
+                        <img src={homeImage} alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Portfolio" class="portfolio-section" data-id="PortfolioSection">
+            <h3>Some Of My Projects</h3>
+            <div class="projects slds-grid">
+                <a href="#">
+                    <img src="" alt="">
+                    <h4>BMI Calculator</h4>
+                </a>
+                <a href="#">
+                    <img src="" alt="">
+                    <h4>Chuck Norris Jokes</h4>
+                </a>
+                <a href="#">
+                    <img src="" alt="">
+                    <h4>Notes App</h4>
+                </a>
+            </div>
+        </section>
+        <section id="Skills" class="skills-section" data-id="SkillsSection">
+            <h3>Things I Can Do</h3>
+            <ul class="slds-grid">
+                <li>
+                    <p class="skill-icon"><i class='bx bx-code-curly'></i></p>
+                    <h4>Apex Programming</h4>
+                </li>
+                <li>
+                    <p class="skill-icon"><i class='bx bxs-data'></i></p>
+                    <h4>SOQL</h4>
+                </li>
+                <li>
+                    <p class="skill-icon"><i class='bx bxs-bolt'></i></p>
+                    <h4>Lightning Web Components</h4>
+                </li>
+                <li>
+                    <p class="skill-icon"><i class='bx bx-network-chart'></i></p>
+                    <h4>Salesforce APIs</h4>
+                </li>
+                <li>
+                    <p class="skill-icon"><i class='bx bx-mouse-alt'></i></p>
+                    <h4>Flows</h4>
+                </li>
+                <li>
+                    <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
+                    <h4>Sales Cloud</h4>
+                </li>
+                <li>
+                    <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
+                    <h4>Service Cloud</h4>
+                </li>
+                <li>
+                    <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
+                    <h4>Experience Cloud</h4>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <div class="slds-grid footer">
+                <a href="#"><i class='bx bxs-bolt'></i></a>
+                <p>Powered by Lightning Web Components</p>
+            </div>
+        </footer>
+    </div>
+</template>
