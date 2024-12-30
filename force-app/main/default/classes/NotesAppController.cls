@@ -1,4 +1,4 @@
-public with sharing class NotesAppController {
+public without sharing class NotesAppController {
     @AuraEnabled
     public static Boolean saveNote(String recordId, String title, String body) {
         try {
