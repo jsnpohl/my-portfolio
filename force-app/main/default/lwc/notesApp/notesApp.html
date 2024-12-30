@@ -1,7 +1,7 @@
 <template>
     <c-notification></c-notification>
     <div class="app-container">
-        <div class="new-note bg-yellow" onclick={handleNewNote}>
+        <div class="new-note" onclick={handleNewNote}>
             <div class="new-note-container">
                 <div class="new-note-icon">
                     <i class='bx bx-plus-circle'></i>
@@ -10,7 +10,7 @@
             </div>
         </div>
         <template for:each={noteList} for:item="note">
-            <div class="note bg-yellow" key={note.id}>
+            <div class="note" key={note.id}>
                 <div class="note-header">
                     <p>
                         {note.Name} 

@@ -9,11 +9,11 @@
     --slds-c-toast-sizing-min-width: 320px;
 }
 .success {
-    --slds-c-toast-color-background: rgb(39, 174, 96, 0.8);
+    --slds-c-toast-color-background: rgb(127, 140, 141, 0.7);
 }
 .error {
-    --slds-c-toast-color-background: rgb(231, 72, 86, 0.8);
+    --slds-c-toast-color-background: rgb(220, 20, 60, 0.7);
 }
 .info {
-    --slds-c-toast-color-background: rgb(127, 140, 141, 0.8);
+    --slds-c-toast-color-background: rgb(127, 140, 141, 0.7);
 }

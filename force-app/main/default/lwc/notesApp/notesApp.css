@@ -14,6 +14,7 @@
     color: var(--text-color);
 }
 .new-note {
+    background-color: #FFFF99;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +43,7 @@
     margin-left: 5px;
 }
 .note {
+    background-color: #FFFF99;
     font-family: "Architects Daughter", serif;
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
@@ -99,18 +101,6 @@
 }
 .footer-actions .disabled {
     filter: brightness(1.4);
-}
-.bg-yellow {
-    background-color: #FFFF99;
-}
-.bg-blue {
-    background-color: #99ffff;
-}
-.bg-pink {
-    background-color: #ff99be;
-}
-.bg-green {
-    background-color: #99ff99;
 }
 .save-button {
     --slds-c-button-brand-color-background: var(--text-color);
