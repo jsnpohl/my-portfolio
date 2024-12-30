@@ -7,8 +7,8 @@ export default class Notification extends LightningElement {
 
     
     get notificationClasses() {
-        let variantClass = this.variant === 'success' ? 'slds-theme_success' : this.variant === 'error' ? 'slds-theme_error' : 'slds-theme_info';
-        return `slds-notify slds-notify_toast ${variantClass}`;
+        let variantClass = this.variant === 'success' ? 'success' : this.variant === 'error' ? 'error' : 'info';
+        return `slds-notify slds-notify_toast notification-shared-styles ${variantClass}`;
     }
     @api
     showToast(message, variant) {
@@ -17,6 +17,6 @@ export default class Notification extends LightningElement {
         this.showNotification = true;
         setTimeout(()=>{
             this.showNotification = false;
-        }, 5000)
+        }, 4000)
     }
 }

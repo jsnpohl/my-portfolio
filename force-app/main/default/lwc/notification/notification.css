@@ -1,0 +1,19 @@
+.notification {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+}
+.notification-shared-styles {
+    --slds-c-toast-text-color: #ffffff;
+    --slds-c-toast-radius-border: 0px;
+    --slds-c-toast-sizing-min-width: 320px;
+}
+.success {
+    --slds-c-toast-color-background: rgb(39, 174, 96, 0.8);
+}
+.error {
+    --slds-c-toast-color-background: rgb(231, 72, 86, 0.8);
+}
+.info {
+    --slds-c-toast-color-background: rgb(127, 140, 141, 0.8);
+}

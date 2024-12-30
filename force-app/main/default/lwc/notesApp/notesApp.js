@@ -67,9 +67,11 @@ export default class NotesApp extends LightningElement {
         deleteNote({
             recordId:recordid
         }).then(()=>{
+            this.showNotification('Note Deleted Successfully!', 'success');
             this.refresh();
             this.resetDefaults();
         }).catch((error)=>{
+            this.showNotification('Something went wrong...', 'error');
             console.error('error', error.message.body);
         })
     }
@@ -92,12 +94,12 @@ export default class NotesApp extends LightningElement {
             title:this.noteRecord.Name, 
             body:this.noteRecord.Body__c
         }).then(()=>{
-            // this.showNotification('Great Job!', 'success');
+            this.showNotification('Note Saved Successfully!', 'success');
             this.showNoteModal = false;
             this.refresh();
             this.resetDefaults();
         }).catch((error)=>{
-            // this.showNotification('Something went wrong...', 'error');
+            this.showNotification('Something went wrong...', 'error');
             console.error('error', error.message.body);
         })
     }
