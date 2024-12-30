@@ -1,0 +1,142 @@
+:host() {
+    --text-color: #404040;
+    --bg-color: #ffffff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+.app-container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--text-color);
+}
+.new-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    padding: 20px;
+    height: 280px;
+    width: 280px;
+    border-radius: 0px;
+    box-shadow: 5px 5px 4px #888888;
+    cursor: pointer;
+}
+.new-note:hover {
+    filter: brightness(.95);
+}
+.new-note-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new-note-icon {
+    font-size: 30px;
+}
+.new-note-text {
+    font-family: "Architects Daughter", serif;
+    font-size: 22px;
+    margin-left: 5px;
+}
+.note {
+    font-family: "Architects Daughter", serif;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    margin: 25px;
+    padding: 20px 25px;
+    height: 280px;
+    width: 280px;
+    border-radius: 0px;
+    color: var(--text-color);
+    box-shadow: 5px 5px 4px #888888;
+}
+.note-header {
+    display: block;
+    max-width: 230px;
+    max-height: 40px;
+    font-size: 22px;
+    font-weight: 600;
+    overflow: hidden;
+}
+.note-body {
+    display: block;
+    max-width: 230px;
+    max-height: 160px;
+    padding: 0 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    overflow: hidden;
+}
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 230px;
+    max-height: 40px;
+}
+.note-footer .footer-text {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    align-self: end;
+}
+.note-footer .footer-actions {
+    display: flex;
+    justify-content: space-between;
+    align-self: end;
+}
+.footer-actions i {
+    margin-left: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    align-self: end;
+    justify-self: end;
+}
+.footer-actions i:hover {
+    filter: brightness(1.4);
+}
+.footer-actions .disabled {
+    filter: brightness(1.4);
+}
+.bg-yellow {
+    background-color: #FFFF99;
+}
+.bg-blue {
+    background-color: #99ffff;
+}
+.bg-pink {
+    background-color: #ff99be;
+}
+.bg-green {
+    background-color: #99ff99;
+}
+.save-button {
+    --slds-c-button-brand-color-background: var(--text-color);
+    --slds-c-button-brand-color-background-active: var(--text-color);
+    --slds-c-button-brand-color-background-hover: var(--text-color);
+    --slds-c-button-brand-color-border: var(--text-color);
+    --slds-c-button-brand-color-border-hover: var(--text-color);
+}
+.cancel-button {
+    --slds-c-button-outline-brand-color-background: transparent;
+    --slds-c-button-outline-brand-color-background-active: transparent;
+    --slds-c-button-outline-brand-color-background-hover: transparent;
+    --slds-c-button-outline-brand-color-border: var(--text-color);
+    --slds-c-button-outline-brand-color-border-hover: var(--text-color);
+    --slds-c-button-text-color: var(--text-color);
+    --slds-c-button-text-color-active: var(--text-color);
+    --slds-c-button-text-color-hover: var(--text-color);
+}
+.input-field {
+    --slds-c-input-shadow-focus: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    .app-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+  }

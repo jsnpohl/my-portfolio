@@ -1,7 +1,9 @@
-.container {
+:host() {
     --primary-color: #00ffec;
     --text-color-light: #ffffff;
     --bg-color: #1f242d;
+}
+.container {
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color-light);

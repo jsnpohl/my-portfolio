@@ -1,0 +1,70 @@
+<template>
+    <!-- <c-notification></c-notification> -->
+    <div class="app-container">
+        <div class="new-note bg-yellow" onclick={handleNewNote}>
+            <div class="new-note-container">
+                <div class="new-note-icon">
+                    <i class='bx bx-plus-circle'></i>
+                </div>
+                <p class="new-note-text">New Note</p>
+            </div>
+        </div>
+        <template for:each={noteList} for:item="note">
+            <div class="note bg-yellow" key={note.id}>
+                <div class="note-header">
+                    <p>
+                        {note.Name} 
+                    </p>
+                </div>
+                <div class="note-body">
+                    <p>
+                        {note.Body__c}
+                    </p>
+                </div>
+                <div class="note-footer">
+                    <p class="footer-text">
+                    {note.formattedDate}
+                    </p>
+                    <div class="footer-actions">
+                        <i class='bx bxs-edit' data-recordid={note.Id} onclick={handleEditNote}></i>
+                        <template if:true={isDeleting}>
+                            <i class='bx bxs-trash disabled'></i>
+                        </template>
+                        <template if:false={isDeleting}>
+                            <i class='bx bxs-trash' data-recordid={note.Id} onclick={handleDeleteNote}></i>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+    <template if:true={showNoteModal}>
+        <c-modal>
+            <h1 slot="header">{modalTitle}</h1>
+            <form>
+                <lightning-input 
+                name="Name"
+                class="input-field"
+                value={noteRecord.Name} 
+                type="text" 
+                onchange={handleNoteChange}
+                label="Title" 
+                placeholder="enter title..." 
+                maxlength="20"></lightning-input>
+                <lightning-input 
+                name="Body__c"
+                class="input-field"
+                value={noteRecord.Body__c}
+                type="text" 
+                onchange={handleNoteChange}
+                label="Body" 
+                placeholder="enter body..." 
+                maxlength="140"></lightning-input>
+            </form>
+            <div slot="footer">
+                <button class="cancel-button slds-button slds-button_outline-brand" onclick={handleCloseNoteModal}>Cancel</button>
+                <button class="save-button slds-button slds-button_brand" onclick={handleSaveNote} disabled={isSaveButtonDisabled}>Save</button>
+            </div>
+        </c-modal>
+    </template>
+</template>
