@@ -1,5 +1,5 @@
 :host() {
-    --text-color: #404040;
+    --text-color: #282828;
     --bg-color: #ffffff;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -7,11 +7,16 @@
 }
 .app-container {
     background-color: var(--bg-color);
-    color: var(--text-color);
+    background-image: url('/resource/notesbg');
+    background-size: cover;
+    background-repeat: no-repeat;
     min-height: 100vh;
+    color: var(--text-color);
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     color: var(--text-color);
+    padding: 20px;
 }
 .new-note {
     background-color: #FFFF99;
@@ -23,8 +28,14 @@
     height: 280px;
     width: 280px;
     border-radius: 0px;
-    box-shadow: 5px 5px 4px #888888;
     cursor: pointer;
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
 }
 .new-note:hover {
     filter: brightness(.95);
@@ -53,7 +64,13 @@
     width: 280px;
     border-radius: 0px;
     color: var(--text-color);
-    box-shadow: 5px 5px 4px #888888;
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
 }
 .note-header {
     display: block;
@@ -126,6 +143,7 @@
 @media only screen and (max-width: 700px) {
     .app-container {
         flex-direction: column;
+        justify-content: start;
         align-items: center;
     }
   }

@@ -19,8 +19,7 @@ export default class NotesApp extends LightningElement {
     isSaving = false;
     isDeleting = false;
 
-    constructor() {
-        super();
+    connectedCallback() {
         this.doInit();
     }
     get modalTitle() {
