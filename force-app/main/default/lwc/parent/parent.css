@@ -1,0 +1,17 @@
+.message {
+    min-height: 50px;
+    width: 100%;
+    overflow: hidden;
+    font-size: 22px;
+}
+.button {
+    --slds-c-button-success-color-background: #e100ff;
+    --slds-c-button-success-color-background-active: #bf00d9;
+    --slds-c-button-success-color-background-hover: #bf00d9;
+    --slds-c-button-success-color-border: #e100ff;
+    --slds-c-button-success-color-border-active: #bf00d9;
+    --slds-c-button-success-color-border-hover: #bf00d9;
+    --slds-c-button-success-text-color: #ffffff;
+    --slds-c-button-success-text-color-active: #ffffff;
+    --slds-c-button-success-text-color-hover: #ffffff;
+}

@@ -1,0 +1,17 @@
+.container {
+    --slds-c-card-color-background: #ebebeb;
+}
+.message {
+    min-height: 50px;
+    width: 100%;
+    overflow: hidden;
+    font-size: 22px;
+}
+.button {
+    --slds-c-button-outline-brand-color-background-hover: #ffffff;
+    --slds-c-button-outline-brand-color-border: #e100ff;
+    --slds-c-button-outline-brand-color-border-hover: #bf00d9;
+    --slds-c-button-text-color: #e100ff;
+    --slds-c-button-text-color-active: #bf00d9;
+    --slds-c-button-text-color-hover: #bf00d9;
+}

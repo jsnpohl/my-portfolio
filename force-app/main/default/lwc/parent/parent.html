@@ -1,0 +1,41 @@
+<template>
+    <lightning-card  title="Parent">
+        <div class="slds-var-p-horizontal_large slds-var-p-vertical_x-small">
+            <lightning-input  
+            type="text" 
+            label="Talk to Child" 
+            placeholder="type message here..."
+            value={messageToChild} 
+            onchange={handleToChildChange}></lightning-input>
+            <lightning-button
+            class="button" 
+            stretch="true" 
+            variant="success" 
+            label="Send" 
+            title="Send To Child" 
+            onclick={handleToChildSend}></lightning-button>
+        </div>
+        <div class="slds-var-p-horizontal_large slds-var-p-vertical_x-small">
+            <lightning-input 
+            type="text" 
+            label="Talk to Stranger" 
+            placeholder="type message here..."
+            value={messageToStranger} 
+            onchange={handleToStrangerChange}></lightning-input>
+            <lightning-button
+            class="button" 
+            stretch="true" 
+            variant="success" 
+            label="Send" 
+            title="Send To Stranger"
+            onclick={handleToStrangerSend}></lightning-button>
+        </div>
+        <div class="slds-grid slds-grid_vertical slds-var-p-horizontal_large slds-var-p-vertical_x-small">
+            <div class="slds-col">Message Recieved:</div>
+            <div class="message slds-col slds-wrap">{messageRecieved}</div>
+        </div>
+        <div class="slds-var-p-horizontal_large slds-var-p-vertical_x-small">
+            <c-child message-from-parent={messageToChild} onnotifyparent={handleChildToParentNotify}></c-child>
+        </div>
+    </lightning-card>
+</template>
