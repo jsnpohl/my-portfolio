@@ -1,0 +1,97 @@
+:host() {
+    --text-color: #282828;
+    --bg-color: #000000;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.app-container-bg {
+    background-color: var(--bg-color);
+    background-image: url('/resource/barbg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.app-container {
+    background-color: rgba(0, 0, 0, 0.15);
+    min-height: 100vh;
+    min-width: 100vw;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
+}
+.image-slot {
+    height: 400px;
+    width: 400px;
+    background-color: transparent;
+}
+.image-slot img {
+    object-fit: contain;
+    border-radius: 0.25rem 0.25rem 0 0;
+    cursor: pointer;
+}
+.detail-slot {
+    width: 400px;
+    min-height: 330px;
+    padding: 10px 20px 20px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.detail-slot h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.detail-slot p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999;
+}
+.btn {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 24px;
+    background: rgb(253,29,29);
+    background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
+    color: #ffffff;
+    border-radius: 0 0 0.25rem 0.25rem;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .15s;
+}
+.btn:hover {
+    background: rgb(232, 27, 27);
+    background: linear-gradient(90deg, rgba(232, 27, 27) 0%, rgb(226, 158, 63) 100%);
+}
+.btn-icon {
+    margin-right: 10px;
+    font-size: 21px;
+}
+.glass-info {
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999999;
+}
