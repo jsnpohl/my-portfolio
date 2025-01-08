@@ -40,58 +40,57 @@
             </div>
         </section>
         <section id="Portfolio" class="portfolio-section" data-id="PortfolioSection">
-            <h3>Some Of My Projects</h3>
-            <div class="projects slds-grid">
-                <a href="#">
-                    <img src="" alt="">
-                    <h4>BMI Calculator</h4>
-                </a>
-                <a href="#">
-                    <img src="" alt="">
-                    <h4>Chuck Norris Jokes</h4>
-                </a>
-                <a href="#">
-                    <img src="" alt="">
-                    <h4>Notes App</h4>
-                </a>
+            <h3 class="section-title">Projects</h3>
+            <div class="section-body">
+                <div class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-large-size_1-of-3">
+                    <c-project-card app-thumb={projectOneAppThumb} project-name={projectOneName} feature-one={projectOneFeatureOne} feature-two={projectOneFeatureTwo} feature-three={projectOneFeatureThree} onclick={handleProjectOneClick}></c-project-card>
+                </div>
+                <div class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-large-size_1-of-3">
+                    <c-project-card app-thumb={projectTwoAppThumb} project-name={projectTwoName} feature-one={projectTwoFeatureOne} feature-two={projectTwoFeatureTwo} feature-three={projectTwoFeatureThree} onclick={handleProjectTwoClick}></c-project-card>
+                </div>
+                <div class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-large-size_1-of-3">
+                    <c-project-card app-thumb={projectThreeAppThumb} project-name={projectThreeName} feature-one={projectThreeFeatureOne} feature-two={projectThreeFeatureTwo} feature-three={projectThreeFeatureThree} onclick={handleProjectThreeClick}></c-project-card>
+                </div>
             </div>
         </section>
         <section id="Skills" class="skills-section" data-id="SkillsSection">
-            <h3>Things I Can Do</h3>
-            <ul class="slds-grid">
-                <li>
-                    <p class="skill-icon"><i class='bx bx-code-curly'></i></p>
-                    <h4>Apex Programming</h4>
-                </li>
-                <li>
-                    <p class="skill-icon"><i class='bx bxs-data'></i></p>
-                    <h4>SOQL</h4>
-                </li>
-                <li>
-                    <p class="skill-icon"><i class='bx bxs-bolt'></i></p>
-                    <h4>Lightning Web Components</h4>
-                </li>
-                <li>
-                    <p class="skill-icon"><i class='bx bx-network-chart'></i></p>
-                    <h4>Salesforce APIs</h4>
-                </li>
-                <li>
-                    <p class="skill-icon"><i class='bx bx-mouse-alt'></i></p>
-                    <h4>Flows</h4>
-                </li>
-                <li>
-                    <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
-                    <h4>Sales Cloud</h4>
-                </li>
-                <li>
-                    <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
-                    <h4>Service Cloud</h4>
-                </li>
-                <li>
-                    <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
-                    <h4>Experience Cloud</h4>
-                </li>
-            </ul>
+            <h3 class="section-title">Skills</h3>
+            <div class="section-body">
+                <ul class="slds-grid">
+                    <li>
+                        <p class="skill-icon"><i class='bx bx-code-curly'></i></p>
+                        <h4>Apex Programming</h4>
+                    </li>
+                    <li>
+                        <p class="skill-icon"><i class='bx bxs-data'></i></p>
+                        <h4>SOQL</h4>
+                    </li>
+                    <li>
+                        <p class="skill-icon"><i class='bx bxs-bolt'></i></p>
+                        <h4>Lightning Web Components</h4>
+                    </li>
+                    <li>
+                        <p class="skill-icon"><i class='bx bx-network-chart'></i></p>
+                        <h4>Salesforce APIs</h4>
+                    </li>
+                    <li>
+                        <p class="skill-icon"><i class='bx bx-mouse-alt'></i></p>
+                        <h4>Flows</h4>
+                    </li>
+                    <li>
+                        <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
+                        <h4>Sales Cloud</h4>
+                    </li>
+                    <li>
+                        <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
+                        <h4>Service Cloud</h4>
+                    </li>
+                    <li>
+                        <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
+                        <h4>Experience Cloud</h4>
+                    </li>
+                </ul>
+            </div>
         </section>
         <footer>
             <div class="slds-grid footer">

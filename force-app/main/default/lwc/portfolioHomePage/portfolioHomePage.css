@@ -1,11 +1,12 @@
 :host() {
-    --primary-color: #00ffec;
-    --text-color-light: #ffffff;
-    --bg-color: #1f242d;
+    --primary-color: #eee;
+    --text-color-light: #eee;
+    --text-color-dark: #212121;
+    --bg-color-primary: #212121;
 }
 .container {
     margin: 0;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-primary);
     color: var(--text-color-light);
 }
 a {
@@ -60,7 +61,6 @@ a {
     min-height: 88vh;
     padding: 40px 15% 0;
     color: var(--text-color-light);
-    /* border: .25px solid white; */
 }
 .home-section-info {
     width: 50%;
@@ -94,7 +94,7 @@ a {
     display: inline-block;
     padding: 8px 24px;
     background: var(--primary-color);
-    color: var(--bg-color);
+    color: var(--bg-color-primary);
     border: 2px solid var(--primary-color);
     border-radius: 4px;
     font-size: 16px;
@@ -103,7 +103,7 @@ a {
 }
 .btn:hover {
     cursor: pointer;
-    background: var(--bg-color);
+    background: var(--bg-color-primary);
     color: var(--primary-color);
     box-shadow: 0 0 9px var(--primary-color);
 }
@@ -153,8 +153,8 @@ a {
     position: relative;
     width: 100%;
     height: 100%;
-    background: var(--bg-color);
-    border: 1px solid var(--bg-color);
+    background: var(--bg-color-primary);
+    border: 1px solid var(--bg-color-primary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -171,28 +171,31 @@ a {
 }
 .portfolio-section {
     min-height: 100vh;
-    padding: 60px 10% 0;
-    color: #ffffff;
-    border: .25px solid white;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+}
+.section-title {
+    font-size: 32px;
+    padding: 30px 0 15px;
+    border-bottom: 1px solid #3b3b3b;
+}
+.section-body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 0;
 }
 .skills-section {
     min-height: 100vh;
-    padding: 60px 10% 0;
-    color: #ffffff;
-    border: .25px solid white;
-}
-.contact-section {
-    min-height: 100vh;
-    padding: 60px 10% 0;
-    color: #ffffff;
-    border: .25px solid white;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
 }
 .footer {
     min-height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: .25px solid white;
 }
 .footer a {
     color: var(--primary-color);
@@ -204,16 +207,4 @@ a {
     display: inline-flex;
     padding: 7px 5px;
     font-size: 16px;
-}
-/* small tablet */
-@media screen and (min-width: 620px){
-    
-}
-/* large tablet - laptop */
-@media screen and (min-width: 960px){
-    
-}
-/* desktop */
-@media screen and (min-width: 1200px){
-    
 }
