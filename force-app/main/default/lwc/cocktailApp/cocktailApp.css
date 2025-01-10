@@ -4,17 +4,12 @@
     background-color: var(--bg-color);
     color: var(--text-color);
 }
-.app-container-bg {
+.app-container {
     background-color: var(--bg-color);
     background-image: url('/resource/barbg');
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
-}
-.app-container {
-    background-color: rgba(0, 0, 0, 0.15);
-    min-height: 100vh;
-    min-width: 100vw;
     color: var(--text-color);
     display: flex;
     justify-content: center;
@@ -35,9 +30,10 @@
     ;
 }
 .image-slot {
-    height: 400px;
+    height: 350px;
     width: 400px;
     background-color: transparent;
+    overflow: hidden;
 }
 .image-slot img {
     object-fit: contain;
@@ -46,22 +42,21 @@
 }
 .detail-slot {
     width: 400px;
-    min-height: 330px;
-    padding: 10px 20px 20px;
+    min-height: 35vh;
+    padding: 5px 15px 10px;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 .detail-slot h1 {
-    margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
 }
 .detail-slot p {
-    margin: 5px 0;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color: #999999;
 }
@@ -88,10 +83,4 @@
 .btn-icon {
     margin-right: 10px;
     font-size: 21px;
-}
-.glass-info {
-    font-style: italic;
-    font-size: 14px;
-    font-weight: 400;
-    color: #999999;
 }

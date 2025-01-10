@@ -1,0 +1,149 @@
+:host() {
+    --marquee-forward-item-width: 200px;
+    --marquee-forward-item-height: 200px;
+    --marquee-reverse-item-width: 150px;
+    --marquee-reverse-item-height: 150px;
+    --marquee-forward-duration: 36s;
+    --marquee-forward-items: 9;
+    --marquee-reverse-duration: 36s;
+    --marquee-reverse-items: 9;
+}
+.certs-scroll-container {
+    padding: 50px 0;
+}
+.marquee-f {
+    display: flex;
+    block-size: var(--marquee-forward-item-height);
+    margin-block: 50px;
+    position: relative;
+    overflow-x: hidden;
+    mask-image: linear-gradient(
+      to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 20%,
+      hsl(0 0% 0% / 1) 80%,
+      hsl(0 0% 0% / 0)
+      );
+}
+.marquee-r {
+    display: flex;
+    block-size: var(--marquee-reverse-item-height);
+    margin-block: 50px;
+    position: relative;
+    overflow-x: hidden;
+    mask-image: linear-gradient(
+      to left,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 20%,
+      hsl(0 0% 0% / 1) 80%,
+      hsl(0 0% 0% / 0)
+      );
+}
+.marquee__item-forward {
+    --marquee-item-offset: max(
+        calc(var(--marquee-forward-item-width) * var(--marquee-forward-items)),
+        calc(100% + var(--marquee-forward-item-width))
+    );
+    --marquee-delay: calc(var(--marquee-forward-duration) / var(--marquee-forward-items) * (var(--marquee-forward-items) - var(--marquee-item-index)) * -1);
+    position: absolute;
+    inset-inline-start: var(--marquee-item-offset);
+    transform: translateX(-50%);
+    animation: go-forward linear var(--marquee-forward-duration) var(--marquee-delay, 0s) infinite;
+    animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+}
+
+.marquee__item-reverse {
+    --marquee-item-offset: max(
+      calc(var(--marquee-reverse-item-width) * var(--marquee-reverse-items)),
+      calc(100% + var(--marquee-reverse-item-width))
+    );
+    --marquee-delay: calc(var(--marquee-reverse-duration) / var(--marquee-reverse-items) * (var(--marquee-reverse-items) - var(--marquee-item-index)) * -1);
+    position: absolute;
+    inset-inline-start: var(--marquee-item-offset);
+    transform: translateX(-50%);
+    animation: go-reverse linear var(--marquee-reverse-duration) var(--marquee-delay, 0s) infinite reverse;
+}
+  
+.marquee--forward .marquee__item-forward:nth-of-type(1) {
+    --marquee-item-index: 1;
+}
+
+.marquee--forward .marquee__item-forward:nth-of-type(2) {
+    --marquee-item-index: 2;
+}
+
+.marquee--forward .marquee__item-forward:nth-of-type(3) {
+    --marquee-item-index: 3;
+}
+
+.marquee--forward .marquee__item-forward:nth-of-type(4) {
+    --marquee-item-index: 4;
+}
+
+.marquee--forward .marquee__item-forward:nth-of-type(5) {
+    --marquee-item-index: 5;
+}
+
+.marquee--forward .marquee__item-forward:nth-of-type(6) {
+    --marquee-item-index: 6;
+}
+
+.marquee--forward .marquee__item-forward:nth-of-type(7) {
+        --marquee-item-index: 7;
+}
+
+.marquee--forward .marquee__item-forward:nth-of-type(8) {
+    --marquee-item-index: 8;
+}
+
+.marquee--forward .marquee__item-forward:nth-of-type(9) {
+    --marquee-item-index: 9;
+}
+
+.marquee--reverse .marquee__item-reverse:nth-of-type(1) {
+    --marquee-item-index: 1;
+}
+
+.marquee--reverse .marquee__item-reverse:nth-of-type(2) {
+    --marquee-item-index: 2;
+}
+
+.marquee--reverse .marquee__item-reverse:nth-of-type(3) {
+    --marquee-item-index: 3;
+}
+
+.marquee--reverse .marquee__item-reverse:nth-of-type(4) {
+    --marquee-item-index: 4;
+}
+
+.marquee--reverse .marquee__item-reverse:nth-of-type(5) {
+    --marquee-item-index: 5;
+}
+
+.marquee--reverse .marquee__item-reverse:nth-of-type(6) {
+    --marquee-item-index: 6;
+}
+
+.marquee--reverse .marquee__item-reverse:nth-of-type(7) {
+    --marquee-item-index: 7;
+}
+
+.marquee--reverse .marquee__item-reverse:nth-of-type(8) {
+    --marquee-item-index: 8;
+}
+
+.marquee--reverse .marquee__item-reverse:nth-of-type(9) {
+    --marquee-item-index: 9;
+}
+
+@keyframes go-forward {
+    to {  
+        inset-inline-start: calc(var(--marquee-forward-item-width) * -1);
+    }
+}
+
+@keyframes go-reverse {
+    to {  
+        inset-inline-start: calc(var(--marquee-reverse-item-width) * -1);
+    }
+}

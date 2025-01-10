@@ -1,54 +1,42 @@
 import { LightningElement } from 'lwc';
 import homeImage from '@salesforce/resourceUrl/portfolioHomeImg';
-import adminCert from '@salesforce/resourceUrl/certadmin';
 import COCKTAIL_APP_THUMB from "@salesforce/resourceUrl/cocktailAppThumb";
 import NOTES_APP_THUMB from "@salesforce/resourceUrl/notesAppThumb";
 import COMMUNICATION_APP_THUMB from "@salesforce/resourceUrl/communicationAppThumb";
-import { NavigationMixin } from 'lightning/navigation';
 
-export default class PortfolioHomePage extends NavigationMixin(LightningElement) {
-    adminCert = adminCert;
+export default class PortfolioHomePage extends LightningElement {
     homeImage = homeImage;
-    projectOneAppThumb = COCKTAIL_APP_THUMB;
-    projectTwoAppThumb = NOTES_APP_THUMB;
-    projectThreeAppThumb = COMMUNICATION_APP_THUMB;
-    projectOneName = 'Random Cocktails';
-    projectOneFeatureOne = 'API Callout';
-    projectOneFeatureTwo = 'Apex Response Wrapper';
-    projectOneFeatureThree = 'LWC, HTML, CSS';
-    projectTwoName = 'Sticky Notes';
-    projectTwoFeatureOne = 'Lightning Web Components';
-    projectTwoFeatureTwo = 'Apex CRUD Operations';
-    projectTwoFeatureThree = 'LWC Lifecycle Hooks';
-    projectThreeName = 'Lightning Communication';
-    projectThreeFeatureOne = 'Parent to Child Communication';
-    projectThreeFeatureTwo = 'Child to Parent Communication';
-    projectThreeFeatureThree = 'Unrelated Component Communication';
+    resumeLink = 'https://jasonpohl-portfolio-dev-ed.develop.my.salesforce.com/sfc/p/ak00000JQh4o/a/ak0000003Id7/mKwxh8EBRb2y6KMbkIakwRxh8caC7TYwswnP69_KIU0';
+    randomCocktailsImage = COCKTAIL_APP_THUMB;
+    stickyNotesImage = NOTES_APP_THUMB;
+    dataExchangeImage = COMMUNICATION_APP_THUMB;
 
-    handleProjectOneClick() {
-        this[NavigationMixin.Navigate]({
-            type: 'comm__namedPage',
-            attributes: {
-                name: 'Cocktail_App__c',
-            }
-        });
-    }
-    handleProjectTwoClick() {
-        this[NavigationMixin.Navigate]({
-            type: 'comm__namedPage',
-            attributes: {
-                name: 'Notes_App__c',
-            }
-        });
-    }
-    handleProjectThreeClick() {
-        this[NavigationMixin.Navigate]({
-            type: 'comm__namedPage',
-            attributes: {
-                name: 'Communication_App__c',
-            }
-        });
-    }
+    projects = [
+        {
+            name: 'Random Cocktails',
+            image: this.randomCocktailsImage,
+            feature1: 'Apex + JSON',
+            feature2: 'Salesforce APIs',
+            feature3: 'LWC, HTML, CSS',
+            link: 'https://jasonpohl-portfolio-dev-ed.develop.my.site.com/cocktail-app'
+        },
+        {
+            name: 'Sticky Notes',
+            image: this.stickyNotesImage,
+            feature1: 'Apex CRUD Operations',
+            feature2: 'LWC Lifecycle Hooks',
+            feature3: 'LWC refreshApex()',
+            link: 'https://jasonpohl-portfolio-dev-ed.develop.my.site.com/notes-app'
+        },
+        {
+            name: 'Data Exchange',
+            image: this.dataExchangeImage,
+            feature1: 'Parent-Child Communication',
+            feature2: 'Custom Events',
+            feature3: 'Lightning Messaging Service',
+            link: 'https://jasonpohl-portfolio-dev-ed.develop.my.site.com/communication-app'
+        }
+    ]
     
     handleNavItemClick(event) {
         const navId = event.target.dataset.id;

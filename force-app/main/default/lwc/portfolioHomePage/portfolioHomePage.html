@@ -7,20 +7,22 @@
                     <p class="nav-item nav-item-active" data-id="Container" onclick={handleNavItemClick}>Home</p>
                 </li>
                 <li>
-                    <p class="nav-item" data-id="Portfolio" onclick={handleNavItemClick}>Portfolio</p>
+                    <p class="nav-item" data-id="Portfolio" onclick={handleNavItemClick}>Projects</p>
                 </li>
                 <li>
                     <p class="nav-item" data-id="Skills" onclick={handleNavItemClick}>Skills</p>
                 </li>
             </ul>
-            <a href="https://jasonpohl-portfolio-dev-ed.develop.my.salesforce.com/sfc/p/ak00000JQh4o/a/ak0000003Id7/mKwxh8EBRb2y6KMbkIakwRxh8caC7TYwswnP69_KIU0" class="nav-btn">Download CV</a>
+            <a href={resumeLink} class="nav-btn">View Resume</a>
         </nav>
-        <section class="home-section slds-grid">
+        <section class="home-section">
             <div class="home-section-info">
                 <h1>Jason Pohl</h1>
-                <h2>Salesforce Developer | 9x Certified</h2>
-                <p>I design and deliver custom solutions that help organizations unlock the full potential of Salesforce.
-                    Let's connect today and build something special!</p>
+                <h2>Salesforce Developer</h2>
+                <p>
+                    I design and deliver custom solutions that help organizations unlock the full potential of Salesforce. 
+                    Let's connect today and build something special!
+                </p>
                 <div class="social-section">
                     <div class="btn" onclick={handleViewWorkClick}>View My Work</div>
                     <div class="social">
@@ -42,55 +44,18 @@
         <section id="Portfolio" class="portfolio-section" data-id="PortfolioSection">
             <h3 class="section-title">Projects</h3>
             <div class="section-body">
-                <div class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-large-size_1-of-3">
-                    <c-project-card app-thumb={projectOneAppThumb} project-name={projectOneName} feature-one={projectOneFeatureOne} feature-two={projectOneFeatureTwo} feature-three={projectOneFeatureThree} onclick={handleProjectOneClick}></c-project-card>
-                </div>
-                <div class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-large-size_1-of-3">
-                    <c-project-card app-thumb={projectTwoAppThumb} project-name={projectTwoName} feature-one={projectTwoFeatureOne} feature-two={projectTwoFeatureTwo} feature-three={projectTwoFeatureThree} onclick={handleProjectTwoClick}></c-project-card>
-                </div>
-                <div class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-large-size_1-of-3">
-                    <c-project-card app-thumb={projectThreeAppThumb} project-name={projectThreeName} feature-one={projectThreeFeatureOne} feature-two={projectThreeFeatureTwo} feature-three={projectThreeFeatureThree} onclick={handleProjectThreeClick}></c-project-card>
-                </div>
+                <template for:each={projects} for:item="project">
+                    <div key={project.name}>
+                        <a href={project.link} target="_blank">
+                            <c-project-card app-thumb={project.image} project-name={project.name} feature-one={project.feature1} feature-two={project.feature2} feature-three={project.feature3}></c-project-card>
+                        </a>
+                    </div>
+                </template>
             </div>
         </section>
         <section id="Skills" class="skills-section" data-id="SkillsSection">
             <h3 class="section-title">Skills</h3>
-            <div class="section-body">
-                <ul class="slds-grid">
-                    <li>
-                        <p class="skill-icon"><i class='bx bx-code-curly'></i></p>
-                        <h4>Apex Programming</h4>
-                    </li>
-                    <li>
-                        <p class="skill-icon"><i class='bx bxs-data'></i></p>
-                        <h4>SOQL</h4>
-                    </li>
-                    <li>
-                        <p class="skill-icon"><i class='bx bxs-bolt'></i></p>
-                        <h4>Lightning Web Components</h4>
-                    </li>
-                    <li>
-                        <p class="skill-icon"><i class='bx bx-network-chart'></i></p>
-                        <h4>Salesforce APIs</h4>
-                    </li>
-                    <li>
-                        <p class="skill-icon"><i class='bx bx-mouse-alt'></i></p>
-                        <h4>Flows</h4>
-                    </li>
-                    <li>
-                        <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
-                        <h4>Sales Cloud</h4>
-                    </li>
-                    <li>
-                        <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
-                        <h4>Service Cloud</h4>
-                    </li>
-                    <li>
-                        <p class="skill-icon"><i class='bx bxs-cloud'></i></p>
-                        <h4>Experience Cloud</h4>
-                    </li>
-                </ul>
-            </div>
+            <c-certs-scroll></c-certs-scroll>
         </section>
         <footer>
             <div class="slds-grid footer">

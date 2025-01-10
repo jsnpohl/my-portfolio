@@ -1,71 +1,41 @@
 <template>
-    <div class="app-container-bg">
-        <div class="app-container">
-            <template lwc:if={strDrinkThumb}>
-                <div class="card">
-                    <div class="image-slot">
-                        <img src={strDrinkThumb} alt="">
-                    </div>
-                    <div class="detail-slot">
-                        <template lwc:if={strDrink}>
-                            <h1>{strDrink}</h1>
-                        </template>
-                        <template lwc:if={strGlass}>
-                            <p class="glass-info">Glass: {strGlass}</p>
-                        </template>
-                        <!-- <template lwc:if={strInstructions}>
-                            <h2>Instructions:</h2>
-                            <p>{strInstructions}</p>
-                        </template> -->
-                        <template lwc:if={strIngredient1}>
-                            <p>{strMeasure1} {strIngredient1}</p>
-                        </template>
-                        <template lwc:if={strIngredient2}>
-                            <p>{strMeasure2} {strIngredient2}</p>
-                        </template>
-                        <template lwc:if={strIngredient3}>
-                            <p>{strMeasure3} {strIngredient3}</p>
-                        </template>
-                        <template lwc:if={strIngredient4}>
-                            <p>{strMeasure4} {strIngredient4}</p>
-                        </template>
-                        <template lwc:if={strIngredient5}>
-                            <p>{strMeasure5} {strIngredient5}</p>
-                        </template>
-                        <template lwc:if={strIngredient6}>
-                            <p>{strMeasure6} {strIngredient6}</p>
-                        </template>
-                        <template lwc:if={strIngredient7}>
-                            <p>{strMeasure7} {strIngredient7}</p>
-                        </template>
-                        <template lwc:if={strIngredient8}>
-                            <p>{strMeasure8} {strIngredient8}</p>
-                        </template>
-                        <template lwc:if={strIngredient9}>
-                            <p>{strMeasure9} {strIngredient9}</p>
-                        </template>
-                        <template lwc:if={strIngredient10}>
-                            <p>{strMeasure10} {strIngredient10}</p>
-                        </template>
-                        <template lwc:if={strIngredient11}>
-                            <p>{strMeasure11} {strIngredient11}</p>
-                        </template>
-                        <template lwc:if={strIngredient12}>
-                            <p>{strMeasure12} {strIngredient12}</p>
-                        </template>
-                        <template lwc:if={strIngredient13}>
-                            <p>{strMeasure13} {strIngredient13}</p>
-                        </template>
-                        <template lwc:if={strIngredient14}>
-                            <p>{strMeasure14} {strIngredient14}</p>
-                        </template>
-                        <template lwc:if={strIngredient15}>
-                            <p>{strMeasure15} {strIngredient15}</p>
-                        </template>
-                    </div>
-                    <div class="btn" onclick={handleGetRandomCocktail}><i class="btn-icon bx bxs-drink"></i>Random Cocktail</div>
+    <div class="app-container">
+        <template lwc:if={strDrinkThumb}>
+            <div class="card">
+                <div class="image-slot">
+                    <img src={strDrinkThumb} alt="">
                 </div>
-            </template>
-        </div>
+                <div class="detail-slot">
+                    <template lwc:if={strDrink}>
+                        <h1>{strDrink}</h1>
+                    </template>
+                    <template lwc:if={strIngredient1}>
+                        <p>{strMeasure1} {strIngredient1}</p>
+                    </template>
+                    <template lwc:if={strIngredient2}>
+                        <p>{strMeasure2} {strIngredient2}</p>
+                    </template>
+                    <template lwc:if={strIngredient3}>
+                        <p>{strMeasure3} {strIngredient3}</p>
+                    </template>
+                    <template lwc:if={strIngredient4}>
+                        <p>{strMeasure4} {strIngredient4}</p>
+                    </template>
+                    <template lwc:if={strIngredient5}>
+                        <p>{strMeasure5} {strIngredient5}</p>
+                    </template>
+                    <template lwc:if={strIngredient6}>
+                        <p>{strMeasure6} {strIngredient6}</p>
+                    </template>
+                    <template lwc:if={strIngredient7}>
+                        <p>{strMeasure7} {strIngredient7}</p>
+                    </template>
+                    <template lwc:if={strIngredient8}>
+                        <p>{strMeasure8} {strIngredient8}</p>
+                    </template>
+                </div>
+                <div class="btn" onclick={handleGetRandomCocktail}><i class="btn-icon bx bxs-drink"></i>Random Cocktail</div>
+            </div>
+        </template>
     </div>
 </template>
