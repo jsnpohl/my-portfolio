@@ -1,12 +1,12 @@
 :host() {
-    --primary-color: #eee;
+    --card-color: #eee;
     --text-color-light: #eee;
     --text-color-dark: #212121;
     --bg-color-primary: #212121;
 }
 .card-container {
-    background-color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    background-color: var(--card-color);
+    border: 2px solid var(--card-color);
     border-radius: 4px;
     cursor: pointer;
     margin: 18px;
